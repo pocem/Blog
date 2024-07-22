@@ -1,0 +1,5 @@
+venv
+.idea
+instance/posts.db
+__pycache__/forms.cpython-312.pyc
+.DS_Store
