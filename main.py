@@ -11,12 +11,12 @@ from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.orm import relationship
 import os
-from dotenv import load_dotenv
+
 
 
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 
-load_dotenv()
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
@@ -97,7 +97,8 @@ class Comment(db.Model):
 
 
 with app.app_context():
-    db.create_all()
+    # db.create_all()
+    pass
 
 # Create an admin-only decorator
 def admin_only(f):
